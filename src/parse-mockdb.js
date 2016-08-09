@@ -754,7 +754,7 @@ function objectsAreEqual(obj1, obj2) {
 
   // both dates
   if (isDate(obj1) && isDate(obj2)) {
-    return deserializeQueryParam(obj1) === deserializeQueryParam(obj2);
+    return deserializeQueryParam(obj1).getTime() === deserializeQueryParam(obj2).getTime();
   }
 
   return false;
